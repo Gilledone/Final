@@ -3,6 +3,7 @@ using System;
 class BankAccount{
   private string accountNumber;
   private decimal balance;
+  private DateTime dateCreated;
 
   public string AccountNumber {
     get {
@@ -30,7 +31,17 @@ class BankAccount{
     }
   }
 
-  public DateTime DateCreated { get; set; }
+  public DateTime DateCreated { 
+    get {
+    return dateCreated;  
+  } set {
+    if (value <= DateTime.Now){
+      dateCreated = value;
+    }else{
+      Console.WriteLine("Can't be future date");
+    }
+    }
+  }
   
 
 
