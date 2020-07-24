@@ -29,7 +29,22 @@ class MainClass {
     Console.WriteLine(account3Args.Balance);
     Console.WriteLine(account3Args.DateCreated);
 
+    var displayAccountInfo = new BankAccount("123123", "Mastercard", 10.21m);
+    displayAccountInfo.DisplayAccountInfo();
+
+    var depositTest = new BankAccount();
+    depositTest.Deposit(10.42m);
+
+    var notEnoughMoney = new BankAccount();
+    notEnoughMoney.Withdraw(10m);
+
+    var withdrawEnoughMoney = new BankAccount("666666", "Blankman", 20m);
+    withdrawEnoughMoney.Withdraw(10m);
+
+    var calculateInterest = new BankAccount();
+    calculateInterest.CalculateInterest();
     
+
 
   }
 }

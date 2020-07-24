@@ -5,8 +5,30 @@ class BankAccount{
   private decimal balance;
   private DateTime dateCreated;
 
+
   public BankAccount(){
     DateCreated = DateTime.Now;
+  }
+  public void DisplayAccountInfo(){
+    Console.WriteLine($"{AccountNumber}, {Name}, {Balance}");
+  }
+
+  public void Deposit(decimal amount){
+    Balance = Balance + amount;
+    Console.WriteLine(Balance);
+  }
+
+  public void CalculateInterest(){
+    Console.WriteLine("This will calculate interest");
+  }
+
+
+  public virtual void Withdraw(decimal amount){
+    if (Balance > amount){
+      Balance = Balance - amount;
+    }else{
+       Console.WriteLine("Too poor lol");
+  }
   }
 
   public BankAccount(string accnbr, string nizame, decimal bal){
