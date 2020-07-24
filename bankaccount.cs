@@ -2,11 +2,12 @@ using System;
 
 class BankAccount{
   private string accountNumber;
-  private decimal balance;
+  protected decimal balance;
   private DateTime dateCreated;
 
 
   public BankAccount(){
+    Console.WriteLine("Bank account constructor");
     DateCreated = DateTime.Now;
   }
   public void DisplayAccountInfo(){
@@ -52,7 +53,7 @@ class BankAccount{
 
   public string Name { get; set; }
 
-  public decimal Balance { 
+  public virtual decimal Balance { 
     get {
       return balance;
     } set {

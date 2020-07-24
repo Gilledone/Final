@@ -45,6 +45,26 @@ class MainClass {
     calculateInterest.CalculateInterest();
     
 
+    var myFirstSavingsAccount = new SavingsAccount();
+    myFirstSavingsAccount.Balance = 0m;
+    Console.WriteLine(myFirstSavingsAccount.Balance);
+
+    var savingsAccount3args = new SavingsAccount("098763", "Paul", 2560m);
+    Console.WriteLine(savingsAccount3args.AccountNumber);
+    Console.WriteLine(savingsAccount3args.Name);
+    Console.WriteLine(savingsAccount3args.Balance);
+    Console.WriteLine(savingsAccount3args.DateCreated);
+
+    var savingsAccountInterest = new SavingsAccount("098763", "Paul", 3000m);
+    Console.WriteLine(savingsAccountInterest.AccountNumber);
+    Console.WriteLine(savingsAccountInterest.Name);
+    Console.WriteLine(savingsAccountInterest.Balance);
+    Console.WriteLine(savingsAccountInterest.DateCreated);
+
+    savingsAccountInterest.CalculateInterest();
+
+
+
 
   }
 }
