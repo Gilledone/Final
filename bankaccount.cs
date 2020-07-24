@@ -5,6 +5,17 @@ class BankAccount{
   private decimal balance;
   private DateTime dateCreated;
 
+  public BankAccount(){
+    DateCreated = DateTime.Now;
+  }
+
+  public BankAccount(string accnbr, string nizame, decimal bal){
+    AccountNumber = accnbr;
+    Name = nizame;
+    Balance = bal;
+    DateCreated = DateTime.Now;
+  }
+
   public string AccountNumber {
     get {
     return accountNumber;
@@ -42,7 +53,6 @@ class BankAccount{
     }
     }
   }
-  
 
 
 }

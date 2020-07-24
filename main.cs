@@ -18,5 +18,18 @@ class MainClass {
     account.DateCreated = new DateTime (2021, 1, 1, 0, 0, 0);
     account.DateCreated = new DateTime (2019, 1, 1, 0, 0, 0);
     Console.WriteLine(account.DateCreated);
+
+    Console.WriteLine("Constructor noargs DateCreated");
+    var accountNoArgs = new BankAccount();
+    Console.WriteLine(accountNoArgs.DateCreated);
+
+    var account3Args = new BankAccount("123456", "Dude", 37.50m);
+    Console.WriteLine(account3Args.AccountNumber);
+    Console.WriteLine(account3Args.Name);
+    Console.WriteLine(account3Args.Balance);
+    Console.WriteLine(account3Args.DateCreated);
+
+    
+
   }
 }
