@@ -25,10 +25,11 @@ class SavingsAccount : BankAccount {
   }
 
   public void CalculateInterest(){
-    Console.WriteLine("Interest override");
-    var interestAdded = Balance * .05m;
-    Console.WriteLine("Added interest and updated balance");
-    Balance += interestAdded;
+    Console.WriteLine($"Calculating 5% for savings account, balance: {Balance}");
+    var interest = Balance * .05m;
+    Console.WriteLine($"Calculated interest, interest: {interest}");
+    Balance += interest;
+    Console.WriteLine($"New balance {Balance}");
   }
 
   
