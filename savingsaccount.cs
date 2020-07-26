@@ -32,6 +32,17 @@ class SavingsAccount : BankAccount {
     Console.WriteLine($"New balance {Balance}");
   }
 
+  public override void Withdraw(decimal amount){
+    Console.WriteLine($"Withdrawing {amount} from saving account with starting balance {Balance}");
+    if (Balance - amount >= 2500){
+      Console.WriteLine("Calling base class");
+      base.Withdraw(amount);
+      Console.WriteLine($"New balance: {Balance}");
+    }else{
+      Console.WriteLine("Insufficient balance");
+    }
+  }
+
   
 
 

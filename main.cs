@@ -102,11 +102,16 @@ class MainClass {
     Console.WriteLine(" ");
 
     savingsAccountInterest.CalculateInterest();
+    Console.WriteLine("");
+
+    savingsAccountInterest.Withdraw(20m);
+    Console.WriteLine("");
+
+    savingsAccountInterest.Withdraw(4000m);
+    Console.WriteLine("");
 
 
 
-
-/*
     Console.WriteLine("Test checking account no arg");
     var myFirstCheckingsAccount = new CheckingsAccount();
     myFirstCheckingsAccount.Balance = 0m;
@@ -114,15 +119,16 @@ class MainClass {
     Console.WriteLine(" ");
 
     Console.WriteLine("Test checkings account 3 arg:");
-    var checkingsAccount3args = new CheckingsAccount("098763", "Paul", 2560m);
+    var checkingsAccount3args = new CheckingsAccount("583094", "Bob",3200m);
     Console.WriteLine(checkingsAccount3args.AccountNumber);
     Console.WriteLine(checkingsAccount3args.Name);
     Console.WriteLine(checkingsAccount3args.Balance);
     Console.WriteLine(checkingsAccount3args.DateCreated);
     Console.WriteLine(" ");
 
-    //savingsAccountWithdraw.Withdraw();
+    checkingsAccount3args.CalculateInterest();
 
-*/
+    checkingsAccount3args.Withdraw(5000m);
+
   }
 }
