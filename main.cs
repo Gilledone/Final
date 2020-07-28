@@ -101,12 +101,15 @@ class MainClass {
     Console.WriteLine(savingsAccountInterest.DateCreated);
     Console.WriteLine(" ");
 
+    Console.WriteLine("Test savings account interest calculator");
     savingsAccountInterest.CalculateInterest();
     Console.WriteLine("");
 
+    Console.WriteLine("Test savings account withdraw");
     savingsAccountInterest.Withdraw(20m);
     Console.WriteLine("");
 
+    Console.WriteLine("Test savings account balance under 2500");
     savingsAccountInterest.Withdraw(4000m);
     Console.WriteLine("");
 
@@ -126,8 +129,11 @@ class MainClass {
     Console.WriteLine(checkingsAccount3args.DateCreated);
     Console.WriteLine(" ");
 
+    Console.WriteLine("Testing check account added interest");
     checkingsAccount3args.CalculateInterest();
+    Console.WriteLine(" ");
 
+    Console.WriteLine("Testing checking account funds under 500 threshold");
     checkingsAccount3args.Withdraw(5000m);
 
   }
